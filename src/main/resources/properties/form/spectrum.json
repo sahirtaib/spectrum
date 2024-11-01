@@ -1,0 +1,76 @@
+[
+  {
+    "title": "@@form.spectrum.editSpectrum@@",
+    "properties": [
+      {
+        "name": "id",
+        "label": "@@form.spectrum.id@@",
+        "type": "TextField",
+        "required": "True",
+        "regex_validation": "^[a-zA-Z0-9_]+$",
+        "validation_message": "@@form.spectrum.invalidId@@"
+      },
+      {
+        "name": "label",
+        "label": "@@form.spectrum.label@@",
+        "type": "TextField",
+        "required": "True",
+        "value": "Spectrum"
+      }
+    ]
+  },
+  {
+    "title": "@@form.spectrum.advancedOptions@@",
+    "properties": [
+      {
+        "label": "@@form.spectrum.data@@",
+        "type": "header"
+      },
+      {
+        "name": "value",
+        "label": "@@form.spectrum.value@@",
+        "type": "TextField"
+      },
+      {
+        "name": "maxlength",
+        "label": "@@form.spectrum.maxlength@@",
+        "type": "TextField"
+      },
+      {
+        "name": "validator",
+        "label": "@@form.spectrum.validator@@",
+        "type": "elementselect",
+        "options_ajax": "[CONTEXT_PATH]/web/property/json/getElements?classname=org.joget.apps.form.model.FormValidator",
+        "url": "[CONTEXT_PATH]/web/property/json[APP_PATH]/getPropertyOptions"
+      },
+      {
+        "label": "@@form.spectrum.ui@@",
+        "type": "header"
+      },
+      {
+        "name": "readonly",
+        "label": "@@form.spectrum.readonly@@",
+        "type": "CheckBox",
+        "value": "False",
+        "options": [
+          {
+            "value": "true",
+            "label": ""
+          }
+        ]
+      },
+      {
+        "name": "readonlyLabel",
+        "label": "@@form.spectrum.readonlyLabel@@",
+        "type": "CheckBox",
+        "value": "False",
+        "options": [
+          {
+            "value": "true",
+            "label": ""
+          }
+        ]
+      }
+    ]
+  }
+]
